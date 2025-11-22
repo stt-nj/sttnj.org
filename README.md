@@ -1,4 +1,4 @@
-SST NJ Website
+STTNJ Website
 
-https://sstnj.org
+https://sttnj.org
 
