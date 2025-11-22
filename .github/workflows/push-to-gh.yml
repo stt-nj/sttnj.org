@@ -1,0 +1,14 @@
+name: Push to GitHub
+on:
+  workflow_dispatch:
+jobs:
+  push_to_gh:
+    name: Push to GitHub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone from Codeberg
+        run: git clone https://codeberg.org/stt-nj/sttnj.org.git
+      - name: Push to GitHub
+        run: |
+          cd site
+          git push https://ehanahamed:${{ secrets.GH_TOKEN }}@github.com/stt-nj/sttnj.org.git --all
