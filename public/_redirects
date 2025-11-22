@@ -1,0 +1,8 @@
+http://stt-nj.org/*  https://sttnj.org/:splat 301!
+https://stt-nj.org/* https://sttnj.org/:splat 301!
+http://sttnj.com/*   https://sttnj.org/:splat 301!
+https://sttnj.com/*  https://sttnj.org/:splat 301!
+http://stt-nj.com/*  https://sttnj.org/:splat 301!
+https://stt-nj.com/* https://sttnj.org/:splat 301!
+/*                   /404                     404
+
