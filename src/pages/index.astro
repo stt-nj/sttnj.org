@@ -1,16 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SparklesSVG from "../components/SparklesSVG.astro";
+import Programs from "../components/Programs.astro";
 ---
-<style>
-    .pretty-green-text-gradient {
-        background-image: linear-gradient(to right, #89FFCC, #9EFF76);
-        background-clip: text;
-        color: transparent;
-    }
-</style>
 <Layout activePage="home" title="STTNJ">
-    <div class="grid intro">
+    <div class="grid intro" style="border-bottom: none;">
         <div class="logotype">
             <div class="logo" style="width: 3rem; height: 3rem;">
                     <SparklesSVG></SparklesSVG>
@@ -22,13 +16,13 @@ import SparklesSVG from "../components/SparklesSVG.astro";
         <div class="content">
             <span class="h3">
                 We're a student-run organization
-                <span class="optional-line">teaching <span class="pretty-green-text-gradient">Comp Sci, Coding, & Robotics</span></span>
+                <span class="optional-line">teaching <span class="pretty-text-gradient">Comp Sci<span style="color: var(--fg-1);">,</span> Coding<span style="color: var(--fg-1);">, &</span> Robotics</span></span>
             </span>
         </div>
     </div>
-    <div class="grid page">
+    <div class="grid page" style="margin-bottom: 8rem;">
         <div class="content">
-            Free Coding Workshop
+            <Programs></Programs>
         </div>
     </div>
 </Layout>

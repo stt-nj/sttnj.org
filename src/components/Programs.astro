@@ -1,0 +1,88 @@
+---
+import ArrowRightIcon from "../components/icons/ArrowRight.astro";
+---
+<style>
+.prettybox {
+    border: none;
+    padding: 1.2rem;
+    --fg-1: #ffffff;
+    --main: #ffffff;
+    --main-alt: #ffffff;
+    --select-bg: rgba(255, 255, 255, 0.4);
+    --on-select-bg: #1f1f1f;
+}
+.prettybox button,
+.prettybox .button {
+    color: #ffffff;
+    background-color: rgba(200, 200, 200, 0.2);
+}
+.prettybox button:hover,
+.prettybox button:focus,
+.prettybox .button:hover,
+.prettybox .button:focus {
+    color: #ffffff;
+    background-color: rgba(200, 200, 200, 0.4);
+}
+.prettybox1 {
+    background-image: linear-gradient(45deg, #2988d6, #30cfa2);
+}
+.prettybox2 {
+    background-image: linear-gradient(45deg, #2985d6, #7230cf);
+}
+.prettybox3,
+.theme-light .prettybox3 {
+    background-image: linear-gradient(45deg, #ef4a38, #dfa226);
+}
+.theme-midnight .prettybox3 {
+    background-image: linear-gradient(45deg, #d63a29, #cf9a30);
+}
+@media (prefers-color-scheme: dark) {
+    .prettybox3 {
+        background-image: linear-gradient(45deg, #d63a29, #cf9a30);
+    }
+}
+
+.splitbuttwo {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 1000px) {
+    .splitbuttwo {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+            <div class="box prettybox prettybox1 grid splitbuttwo" style="row-gap: 2rem;">
+                <div>
+                <h3>Free Coding Workshops</h3>
+                <p>A series of free online coding workshops for middle school students.</p>
+                <a class="button large" style="gap: 0.6rem;" href="https://docs.google.com/forms/d/e/1FAIpQLSfB9VSj-aLYgiMjuwf8CgQ_e_HJVPLvPulW3b2ho9RZdgUaUA/viewform?usp=dialog">
+                    <span>Register Here</span>
+                    <ArrowRightIcon width="1.2rem" height="1.2rem" style="margin-top: 0px;"></ArrowRightIcon>
+                </a>
+                </div>
+                <div>
+                    <div class="flex">
+                        <span class="b" style="font-size: 1.2rem;">4:00 PM Friday, 16 January 2026</span>
+                    </div>
+                    <div class="flex">
+                        <span class="b" style="font-size: 1.2rem;">5:00 PM Friday, 23 January 2026</span>
+                    </div>
+                    <div class="flex">
+                        <span class="b" style="font-size: 1.2rem;">5:00 PM Friday, 6 February 2026</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid splitbuttwo">
+            <div class="box prettybox prettybox2">
+                <h3>In-School Hackathons</h3>
+                <p>
+                    STTNJ hosts in-person Hackathons at local schools.
+                    <span class="optional-line">A Hackathon is a fun event/competition where participants have limited time to build a project, like an app, website, game, or robot.</span>
+                </p>
+            </div>
+            <div class="box prettybox prettybox3">
+                <h3>Summer Courses</h3>
+                <p>Free in-person & online summer courses for middle school students. Topics include web development, robotics, game devlopment, artificial intelligence, & more.</p>
+            </div>
+            </div>
