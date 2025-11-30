@@ -3,7 +3,7 @@ import IconMenu from "./icons/Menu.astro";
 import IconCloseXMark from "./icons/CloseXMark.astro";
 const { activePage } = Astro.props;
 ---
-<header class="navbar" style="margin-bottom: 0px; --main-alt: var(--main); --main-alt-on-bg: var(--main-on-bg);">
+<header class="navbar" style="margin-bottom: 0px; --main: var(--fg-1); --main-alt: var(--yay-alt); --main-alt-on-bg: var(--yay-alt);">
     <div class="menu">
         <input type="checkbox" id="nav-menu-toggle" class="nav-menu-toggle" />
         <label for="nav-menu-toggle" class="nav-menu-open">
@@ -19,7 +19,7 @@ const { activePage } = Astro.props;
               <a href="/">Home</a>
             </div>
             <div class={ activePage == "programs" ? "current" : "" }>
-              <a href="/programs">Programs</a>
+              <a href="/programs">Programs & Events</a>
             </div>
             <!--<div class={ page.data?.header?.activePage == "classes" ? "current" : "" }>
               <a href="/classes">Classes</a>
