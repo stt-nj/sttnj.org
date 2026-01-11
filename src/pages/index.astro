@@ -2,6 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import SparklesSVG from "../components/SparklesSVG.astro";
 import Programs from "../components/Programs.astro";
+import HeartIcon from "../components/icons/Heart.astro";
+import CodebergIcon from "../components/icons/Codeberg.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import DiscordIcon from "../components/icons/Discord.astro";
 ---
 <Layout activePage="home" title="STTNJ">
     <div class="grid intro" style="border-bottom: none;">
@@ -23,6 +27,27 @@ import Programs from "../components/Programs.astro";
     <div class="grid page" style="margin-bottom: 8rem;">
         <div class="content">
             <Programs></Programs>
+            <div class="center" style="margin-top: 6rem;">
+                <h3>We're <span class="love">non-profit</span></h3>
+                <p class="center">
+                    STTNJ is non-profit with <a class="link-love with-underline" href="https://hcb.hackclub.com/sttnj">transparent finances</a>.
+                    <span class="line">We're fiscally sponsored by <a class="link-love with-underline" href="https://the.hackfoundation.org/">The Hack Foundation</a>, a 501(c)(3) nonprofit</span>
+                </p>
+                <div class="flex" style="justify-items: center; justify-content: center;">
+                    <a href="https://hcb.hackclub.com/donations/start/sttnj" class="button alt love large"><HeartIcon width="1.2rem" height="1.2rem" style="margin-top: 0px;"></HeartIcon> Donate</a>
+                </div>
+            </div>
+            <div class="center" style="margin-top: 6rem;">
+                <h3>Join our community</h3>
+                <div class="flex" style="justify-items: center; justify-content: center;">
+                    <a href="https://discord.gg/uB6hHvvF7E" class="button alt large"><DiscordIcon width="1.2rem" height="1.2rem" style="margin-top: 0px;"></DiscordIcon> Discord</a>
+                </div>
+                <p>All our projects are open source on Codeberg & GitHub</p>
+                <div class="flex" style="justify-items: center; justify-content: center;">
+                    <a href="https://codeberg.org/stt-nj" class="button alt large"><CodebergIcon width="1.2rem" height="1.2rem" style="margin-top: 0px;"></CodebergIcon> Codeberg</a>
+                    <a href="https://github.com/stt-nj" class="button alt large"><GitHubIcon width="1.2rem" height="1.2rem" style="margin-top: 0px;"></GitHubIcon> GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
 </Layout>
