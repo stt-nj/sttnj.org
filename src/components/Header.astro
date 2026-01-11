@@ -1,9 +1,30 @@
 ---
 import IconMenu from "./icons/Menu.astro";
 import IconCloseXMark from "./icons/CloseXMark.astro";
+import HeartIcon from "./icons/Heart.astro";
 const { activePage } = Astro.props;
 ---
-<header class="navbar" style="margin-bottom: 0px; --main: var(--fg-1); --main-on-bg: var(--fg-1); --main-alt: var(--yay-alt); --main-alt-on-bg: var(--yay-alt);">
+<style>
+header.with-status {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "menu status";
+}
+
+@media only screen and (max-width: 800px) {
+  header.with-search.with-status {
+    grid-template-columns: auto auto;
+  }
+}
+
+header.with-status > .status {
+  grid-area: status;
+  display: flex;
+  text-align: end;
+  justify-self: end;
+  align-items: center;
+}
+</style>
+<header class="navbar with-status" style="margin-bottom: 0px; --main: var(--fg-1); --main-on-bg: var(--fg-1); --main-alt: var(--yay-alt); --main-alt-on-bg: var(--yay-alt);">
     <div class="menu">
         <input type="checkbox" id="nav-menu-toggle" class="nav-menu-toggle" />
         <label for="nav-menu-toggle" class="nav-menu-open">
@@ -27,6 +48,11 @@ const { activePage } = Astro.props;
             <div class={ activePage == "volunteer" ? "current" : "" }>
               <a href="/volunteer">Volunteer</a>
             </div>
+        </div>
+    </div>
+    <div class="status">
+        <div class="flex" style="margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:1rem;">
+            <a class="button alt love" href="https://hcb.hackclub.com/donations/start/sttnj"><HeartIcon></HeartIcon> Donate</a>
         </div>
     </div>
 </header>
