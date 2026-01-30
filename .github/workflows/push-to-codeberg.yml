@@ -10,5 +10,5 @@ jobs:
         run: git clone https://github.com/stt-nj/sttnj.org.git
       - name: Push to Codeberg
         run: |
-          cd site
+          cd sttnj.org
           git push https://ehanahamed:${{ secrets.CODEBERG_TOKEN }}@codeberg.org/stt-nj/sttnj.org.git --all
